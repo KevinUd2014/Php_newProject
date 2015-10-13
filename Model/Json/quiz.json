@@ -1,0 +1,19 @@
+{
+	"questions" : [
+		{
+			"question" : "What is the creators name?",
+			"option" : ["Kungen", "The Man", " ", "The Master"],
+			"correct" : 2
+		}, 
+		{
+			"question" : "Was that place, THE SUN?",
+			"option" : ["Yes", "Yes?", "Friends", "Chandler.Ross(true);"],
+			"correct" : 3
+		},
+		{
+			"question" : "What's your name?",
+			"option" : ["Huh?", "hello", " ", "Woot"],
+			"correct" : 3
+		}
+	]
+}

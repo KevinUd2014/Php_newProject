@@ -21,7 +21,7 @@ class LayoutView{
     }
 	private function generateQuizButton(){
 
-		if(isset($_GET['Quiz']))
+		if(isset($_GET['Quiz']) || isset($_GET['QuizResultPage']))
 		{
 			return "<a href=?>Avsluta</a>";
 		}
