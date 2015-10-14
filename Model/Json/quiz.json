@@ -14,6 +14,90 @@
 			"question" : "What's your name?",
 			"option" : ["Huh?", "hello", " ", "Woot"],
 			"correct" : 3
+		},
+		{
+			"question" : "What is the creators name?",
+			"option" : ["Kungen", "The Man", " ", "The Master"],
+			"correct" : 2
+		}, 
+		{
+			"question" : "Was that place, THE SUN?",
+			"option" : ["Yes", "Yes?", "Friends", "Chandler.Ross(true);"],
+			"correct" : 3
+		},
+		{
+			"question" : "What's your name?",
+			"option" : ["Huh?", "hello", " ", "Woot"],
+			"correct" : 3
+		}
+	],
+
+	"musicQuestions" : [
+
+		{
+			"question" : "tell me what eminems real name is",
+			"option" : ["the king", "marshall mathers", "slim shady", "pål"],
+			"correct" : 1
+		},
+		{
+			"question" : "tell me what eminems real name is",
+			"option" : ["the king", "marshall mathers", "slim shady", "pål"],
+			"correct" : 1
+		},
+		{
+			"question" : "tell me what eminems real name is",
+			"option" : ["the king", "marshall mathers", "slim shady", "pål"],
+			"correct" : 1
+		},
+		{
+			"question" : "tell me what eminems real name is",
+			"option" : ["the king", "marshall mathers", "slim shady", "pål"],
+			"correct" : 1
+		},
+		{
+			"question" : "tell me what eminems real name is",
+			"option" : ["the king", "marshall mathers", "slim shady", "pål"],
+			"correct" : 1
+		},
+		{
+			"question" : "tell me what eminems real name is",
+			"option" : ["the king", "marshall mathers", "slim shady", "pål"],
+			"correct" : 1
+		}
+
+	],
+
+	"ClassicMusicQuestions" : [
+
+		{
+			"question" : "Did johnny cash and elvis know each other?",
+			"option" : ["yes", "no", "maybe"],
+			"correct" : 0
+		},
+		{
+			"question" : "Did johnny cash and elvis know each other?",
+			"option" : ["yes", "no", "maybe"],
+			"correct" : 0
+		},
+		{
+			"question" : "Did johnny cash and elvis know each other?",
+			"option" : ["yes", "no", "maybe"],
+			"correct" : 0
+		},
+		{
+			"question" : "Did johnny cash and elvis know each other?",
+			"option" : ["yes", "no", "maybe"],
+			"correct" : 0
+		},
+		{
+			"question" : "Did johnny cash and elvis know each other?",
+			"option" : ["yes", "no", "maybe"],
+			"correct" : 0
+		},
+		{
+			"question" : "Did johnny cash and elvis know each other?",
+			"option" : ["yes", "no", "maybe"],
+			"correct" : 0
 		}
 	]
 }

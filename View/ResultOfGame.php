@@ -2,5 +2,5 @@
 
 	class ResultOfGame{
 		
-	
+		//echo "result";
 	}
