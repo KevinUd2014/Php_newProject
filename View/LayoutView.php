@@ -8,12 +8,13 @@ class LayoutView{
 	        <head>
 	          <meta charset="utf-8">
 	          <title>ProjectIzzle</title>
+	          <link type="text/css" rel="stylesheet" href="View/style.css">
 	        </head>
 	        <body>
 	          <h1>Playissle My Quizlesizzzle</h1>
 	          <div class="container">
 	          	  ' . $this->generateQuizButton() . '
-	              ' . $v->response() . '
+	              ' . ($v != null ? $v->response() : "") . '
 	          </div>
 	         </body>
 	      </html>
@@ -27,10 +28,11 @@ class LayoutView{
 		}
 		else//genererar de olika länkarna till mina olika quiz!
 		{
-	    	$startAQuiz = "<a href=?Quiz>Start a Quiz</a> <br/><br/>";
-	    	$musicQuiz = "<a href=?MusicQuiz>Start a MusicQuiz</a> <br/><br/>";
-	    	$classicMusicQuiz = "<a href=?ClassicMusicQuiz>Start a MusicQuiz</a> <br/><br/>";
-	    	return $startAQuiz . $musicQuiz . $classicMusicQuiz;
+	    	$randomQuiz = "<a href=?Quiz=random>Start a random Quiz</a> <br/><br/>";
+	    	$startAQuiz = "<a href=?Quiz=quiz>Start the Ordinary Quiz</a> <br/><br/>";
+	    	$musicQuiz = "<a href=?Quiz=music>Start a Music Quiz</a> <br/><br/>";
+	    	$classicMusicQuiz = "<a href=?Quiz=classicmusic>Start a Classic Music Quiz</a> <br/><br/>";
+	    	return $randomQuiz . $startAQuiz . $musicQuiz . $classicMusicQuiz;
 	    }
 	}
 }

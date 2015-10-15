@@ -1,0 +1,37 @@
+{
+	"name" : "Musik quizzet EVUR",
+	"description" : "aljkfhksjdfh",
+	"questions" : [
+		{
+			"question" : "tell me what eminems real name is",
+			"option" : ["the king", "marshall mathers", "slim shady", "pål"],
+			"correct" : 1
+		},
+		{
+			"question" : "tell me what eminems real name is",
+			"option" : ["the king", "marshall mathers", "slim shady", "pål"],
+			"correct" : 1
+		},
+		{
+			"question" : "tell me what eminems real name is",
+			"option" : ["the king", "marshall mathers", "slim shady", "pål"],
+			"correct" : 1
+		},
+		{
+			"question" : "tell me what eminems real name is",
+			"option" : ["the king", "marshall mathers", "slim shady", "pål"],
+			"correct" : 1
+		},
+		{
+			"question" : "tell me what eminems real name is",
+			"option" : ["the king", "marshall mathers", "slim shady", "pål"],
+			"correct" : 1
+		},
+		{
+			"question" : "tell me what eminems real name is",
+			"option" : ["the king", "marshall mathers", "slim shady", "pål"],
+			"correct" : 1
+		}
+
+	]
+}

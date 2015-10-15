@@ -1,0 +1,15 @@
+.correct
+{
+	background: lightgreen;
+	min-width: 10px;
+	min-height: 10px;
+	display: inline-block;
+}
+
+.wrong
+{
+	background: tomato;
+	min-width: 10px;
+	min-height: 10px;
+	display: inline-block;
+}

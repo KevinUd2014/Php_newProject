@@ -4,12 +4,13 @@ class QuizDAL{
 
 	private static $FILE = "Json/quiz.json";
 
-    public function getQuestions(){
+    public function getQuestions($file){
 
-        $rawfile = file_get_contents(self::$FILE,  true);
+        $rawfile = file_get_contents($file);
             
         $json = json_decode($rawfile, true);
-
+        $questions = $json["questions"];
+/*
         if(isset($_GET["Quiz"])){
 
             $questions = $json["questions"];
@@ -22,7 +23,7 @@ class QuizDAL{
 
             $questions = $json["ClassicMusicQuestions"];
         }
-        
+  */      
         $list = array();
         
         foreach ($questions as $q)
@@ -33,8 +34,14 @@ class QuizDAL{
             
             array_push($list, new QuizQuestion($question,$options,$correct));
         }
-        
 
-        return $list;
+        $quiz = array("name" => $json["name"], "description" => $json["description"], "questions" => $list);
+
+        return $quiz;
+    }
+
+    public function writeToJson($file, $object){
+        $json = json_encode($object);
+        file_put_contents($file, $json);
     }
 }
