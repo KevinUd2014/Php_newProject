@@ -10,27 +10,47 @@
 		{
 			"question" : "Was that place, THE SUN?",
 			"option" : ["Yes", "Yes?", "Friends", "Chandler.Ross(true);"],
-			"correct" : 3
+			"correct" : 2
 		},
 		{
 			"question" : "What's your name?",
 			"option" : ["Huh?", "hello", " ", "Woot"],
-			"correct" : 3
+			"correct" : 2
 		},
 		{
-			"question" : "What is the creators name?",
-			"option" : ["Kungen", "The Man", " ", "The Master"],
-			"correct" : 2
+			"question" : "Which has the highest mountain?",
+			"option" : ["Mars", "Earth", "The Sun"],
+			"correct" : 0
 		}, 
 		{
-			"question" : "Was that place, THE SUN?",
-			"option" : ["Yes", "Yes?", "Friends", "Chandler.Ross(true);"],
+			"question" : "How many men have walked on the moon?",
+			"option" : ["1", "4", "8", "12;"],
 			"correct" : 3
 		},
 		{
-			"question" : "What's your name?",
-			"option" : ["Huh?", "hello", " ", "Woot"],
-			"correct" : 3
+			"question" : "Which is largest?",
+			"option" : ["a megabyte", "a kilobyte", "or a gigabyte?"],
+			"correct" : 2
+		},
+		{
+			"question" : " Where would you find the Sea of Tranquility?",
+			"option" : ["Hawaii", "Pluto", "The Moon", "Antartica"],
+			"correct" : 2
+		},
+		{
+			"question" : "What is another word for lexicon?",
+			"option" : ["Wikipedia", "Dictionary", "or a gigabyte?"],
+			"correct" : 2
+		},
+		{
+			"question" : "Which is largest?",
+			"option" : ["a megabyte", "a kilobyte", "or a gigabyte?"],
+			"correct" : 2
+		},
+		{
+			"question" : "Which is largest?",
+			"option" : ["a megabyte", "a kilobyte", "or a gigabyte?"],
+			"correct" : 2
 		}
 	]
 }

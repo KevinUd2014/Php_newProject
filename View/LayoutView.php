@@ -32,7 +32,8 @@ class LayoutView{
 	    	$startAQuiz = "<a href=?Quiz=quiz>Start the Ordinary Quiz</a> <br/><br/>";
 	    	$musicQuiz = "<a href=?Quiz=music>Start a Music Quiz</a> <br/><br/>";
 	    	$classicMusicQuiz = "<a href=?Quiz=classicmusic>Start a Classic Music Quiz</a> <br/><br/>";
-	    	return $randomQuiz . $startAQuiz . $musicQuiz . $classicMusicQuiz;
+	    	$createQuiz = "<a href=?Quiz=createQuiz>Create a Quiz</a> <br/><br/>";
+	    	return $randomQuiz . $startAQuiz . $musicQuiz . $classicMusicQuiz . $createQuiz;
 	    }
 	}
 }
