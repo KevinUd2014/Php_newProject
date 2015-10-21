@@ -24,7 +24,7 @@
 		}, 
 		{
 			"question" : "How many men have walked on the moon?",
-			"option" : ["1", "4", "8", "12;"],
+			"option" : ["1", "4", "8", "12"],
 			"correct" : 3
 		},
 		{
@@ -39,18 +39,44 @@
 		},
 		{
 			"question" : "What is another word for lexicon?",
-			"option" : ["Wikipedia", "Dictionary", "or a gigabyte?"],
+			"option" : ["Wikipedia", "Dictionary"],
+			"correct" : 1
+		},
+		{
+			"question" : "What is the diameter of Earth?",
+			"option" : ["8000 miles", "200 000 km", "14 000 km", "12 mil(Swedish miles)"],
+			"correct" : 0
+		},
+		{
+			"question" : "What is the oldest film ever made?",
+			"option" : ["King kong", "Ted 2", "Roundhay Garden"],
 			"correct" : 2
 		},
 		{
-			"question" : "Which is largest?",
-			"option" : ["a megabyte", "a kilobyte", "or a gigabyte?"],
+			"question" : "Name the three primary colours?",
+			"option" : ["Blue, Red and pink", "Yellow, Red and Green", "Red, yellow and blue", "Red, Yellow and Green"],
 			"correct" : 2
 		},
 		{
-			"question" : "Which is largest?",
-			"option" : ["a megabyte", "a kilobyte", "or a gigabyte?"],
-			"correct" : 2
+			"question" : "What colour is Absynthe?",
+			"option" : ["Green", "Blue", "Mint", "Yellow"],
+			"correct" : 0
+		},
+		{
+			"question" : " Which city has the largest population?",
+			"option" : ["Shanghai", "Tokyo", "Los Angeles", "Hong Kong"],
+			"correct" : 1
+		},
+		{
+			"question" : "In which business is the richest man in the world?",
+			"option" : ["Computer software, Windows", "Acting", "Politics"],
+			"correct" : 0
+		},
+		{
+			"question" : " What is the most common blood type in humans?",
+			"option" : ["Type 0", "Type A", "Type B", "Type 1"],
+			"correct" : 0
 		}
+
 	]
 }

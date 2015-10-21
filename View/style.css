@@ -13,3 +13,28 @@
 	min-height: 10px;
 	display: inline-block;
 }
+body
+{
+	/*position:Centre;*/
+	margin: auto;
+    width: 95%;
+    border:2px solid lightgreen;
+    padding: 10px;
+
+}
+body h1
+{
+	color: darkgreen;
+}
+body a
+{
+	text-decoration: none;
+}
+body a:link
+{
+	color: blue;
+}
+body a:visited
+{
+	color: darkgreen;
+}

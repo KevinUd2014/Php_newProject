@@ -1,4 +1,9 @@
 <?php
+
+class CreateAQuizView{
+	
+}
+
 /*
 $questions = array(
 	array(
@@ -29,13 +34,7 @@ $q = array(
 );
 
 $quizJSON = json_encode($q, JSON_PRETTY_PRINT);
-echo('<pre>');
+
 var_dump($quizJSON);
-echo('</pre>');
-exit;
+
 */
-	require_once("Controller/MasterController.php");
-
-	$masterController = new MasterController();
-
-	$masterController->startMyApplication();

@@ -39,11 +39,6 @@
 			}*/ //DENNA TESTAR OM VAD MAN FÅR UT FÖR VÄRDEN UR ARRAYEN!
 
 			return $this->arrayOfAnswers;
-
-
-			/*if(isset($_POST[self::$answersOfQuiz])){
-				return isset($_POST[self::$answersOfQuiz]);
-			}*/
 		}
 
 		public function setQuizList($quizname,$quiz)
@@ -52,7 +47,7 @@
 			$this->quizList = $quiz["questions"];
 			$this->quizname = $quizname;
 		}
-		public function actionMessages($message){
+		public function actionMessages($message){//denna används inte tror jag!
 		    //echo $message;
 			$this->message = $message;
 		}
