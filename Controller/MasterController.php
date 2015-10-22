@@ -8,6 +8,8 @@
 	require_once('Model/QuizQuestion.php');
 	require_once("View/LayoutView.php");
 	require_once("Model/QuizDAL.php");
+	require_once("View/CreateAQuizView.php");
+	require_once("Controller/CreateQuizController.php");
 
 	class MasterController{
 			//CREATE OBJECTS OF THE VIEWS  
@@ -21,7 +23,7 @@
 			
 
 			
-			if(isset($_GET["Quiz"]) ||isset($_GET["MusicQuiz"]) || isset($_GET["ClassicMusicQuiz"]))//delar upp min applikation i en register och en login väg!
+			if(isset($_GET["Quiz"]))//delar upp min applikation i en register och en login väg! ||isset($_GET["MusicQuiz"]) || isset($_GET["ClassicMusicQuiz"])
 			{
 
 				$quizController = new QuizController($LayoutView);
@@ -30,8 +32,16 @@
 				$viewToRender = $quizController->getView();
 
 			}
+			else if (isset($_GET["CreatedQuiz"]))
+			{
+				$createQuiz = new CreateAQuizView();
 
-			  $LayoutView->render(null, $viewToRender); // istället för false först så anropar jag min LoginModel och funktionen getLoginstatus som kollar om man är inloggad! ifrån den! den returnerade true eller false
+				$CreateQuizController = new CreateQuizController();
+
+				$viewToRender = $CreateQuizController->getView();
+			}
+
+			$LayoutView->render(null, $viewToRender); // istället för false först så anropar jag min LoginModel och funktionen getLoginstatus som kollar om man är inloggad! ifrån den! den returnerade true eller false
 			  
 		}
 	}

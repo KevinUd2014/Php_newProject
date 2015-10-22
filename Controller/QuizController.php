@@ -24,9 +24,6 @@ class QuizController{
 		{
 			$this->quizname = $this->randomQuizes[rand(0,count($this->randomQuizes)-1)];
 		}
-		else if($_GET["PlayerCreatedQuiz"]){
-			//TODO: Här ska man sätta om nu användaren trycker på create a quiz så ska något göras!
-		}
 		else
 			$this->quizname = $_GET["Quiz"];
 

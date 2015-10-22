@@ -24,20 +24,12 @@
 				if(isset($_POST["q$questionIndex"]))
 				{
 					array_push($this->arrayOfAnswers, intval($_POST["q$questionIndex"]));
-					//$quizquestion->setAnswer(intval($_POST["q$questionIndex"]));
-
 				}
 				else
 					array_push($this->arrayOfAnswers,null);
-				//var_dump($quizquestion,true);
+
 				$questionIndex++;
 			}
-			/*
-			foreach($this->arrayOfAnswers as $answer)
-			{
-				echo $answer;
-			}*/ //DENNA TESTAR OM VAD MAN FÅR UT FÖR VÄRDEN UR ARRAYEN!
-
 			return $this->arrayOfAnswers;
 		}
 
@@ -48,7 +40,7 @@
 			$this->quizname = $quizname;
 		}
 		public function actionMessages($message){//denna används inte tror jag!
-		    //echo $message;
+			
 			$this->message = $message;
 		}
 

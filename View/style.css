@@ -6,6 +6,11 @@
 	display: inline-block;
 }
 
+input.correct
+{
+	width: 40px;
+}
+
 .wrong
 {
 	background: tomato;
@@ -37,4 +42,11 @@ body a:link
 body a:visited
 {
 	color: darkgreen;
+}
+
+#questionbase
+{
+	display: none; 
+	visibility: hidden; 
+	vertical-align: top;
 }
