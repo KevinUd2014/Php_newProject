@@ -7,6 +7,13 @@ class CreateQuizController{
 	{
 
 		$this->view = new CreateAQuizView();
+		$qdal = new QuizDAL();
+		$model = new CreateQuizModel($qdal);
+		$data = null;
+		if ($this->view->checkIfPosted($data))
+		{
+			$model->CreateAQuiz($data);
+		}
 
 	}
 

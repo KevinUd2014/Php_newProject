@@ -11,28 +11,28 @@ class CreateAQuizView{
 
 		//var_dump(isset($_GET["CreatedQuiz"]));
 
-		if(isset($_GET["CreatedQuiz"])){
+		if(isset($_GET["CreateQuiz"])){
 			$response .= $this->generateCreateQuizFormHTML();
 		}
-		$this->checkIfPosted();
+		//$this->checkIfPosted();
 		return $response;
 	}
 
-	public function checkIfPosted()
+	public function checkIfPosted(&$data)
 	{
 		
 		if (isset($_POST[self::$Submit]))
 		{
-			$questions = json_decode($_POST["data"]);
-
-			var_dump($questions);
+			$data = array("questions" => (isset($_POST["questions"]) ? $_POST["questions"] : null), "title" => $_POST[self::$Name], "description" => $_POST[self::$Description]);
+			return true;
 		}
+		return false;
 	}
 
 	private function generateCreateQuizFormHTML() {
 
-		 return '
-		<form>
+		return '
+		<form method="POST" action="?CreateQuiz">
 	
 
 			Quiz name: <br>
@@ -42,22 +42,15 @@ class CreateAQuizView{
 			<input type="text" id="description" name="'.self::$Description.'">
 			<fieldset id="questionbase">
 			  	<legend>Question: </legend>
-			  	<input type="text" name="question">
+			  	<input type="text" name="questions[Q][title]" class="questiontitle">
 
 			  	<ol>
 
 			  		<li>
-			  			<input type="text">
-			  		</li>
-			  		<li>
-			  			<input type="text">
-			  		</li>
-			  		<li>
 			  			<button class="addoption">Add option</button>
 			  		</li>
 			  	</ol>
-			  	<label>Correct answer: <input type="number" min="1" max="2" class="correct">
-			  	<button class="remove">Remove</button>
+			  	<label>Correct answer:</label> <input type="number" name="questions[Q][correct]" min="1" max="1" value="1" class="correct">
 			</fieldset>
 			<div id="questionlist">
 

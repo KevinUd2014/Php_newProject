@@ -11,8 +11,6 @@ class QuizController{
 
 	private $quizname;
 
-	private $randomQuizes = array("quiz","music","classicmusic");
-
 	public function __construct(LayoutView $layoutView){
 
 		$this->quizDAL = new QuizDAL();
@@ -22,12 +20,13 @@ class QuizController{
 
 		if ($_GET["Quiz"] == "random")
 		{
-			$this->quizname = $this->randomQuizes[rand(0,count($this->randomQuizes)-1)];
+			$quizes = $this->quizDAL->getQuizes();
+			$this->quizname = basename(str_replace(".bin","",$quizes[rand(0,count($quizes)-1)]));
 		}
 		else
 			$this->quizname = $_GET["Quiz"];
 
-		$quizfile = "Model/Json/" . $this->quizname . ".json";
+		$quizfile = "Model/quizes/" . $this->quizname . ".bin";
 
 		$this->quiz = $this->quizDAL->getQuestions($quizfile);
 

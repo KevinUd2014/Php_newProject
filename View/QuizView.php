@@ -36,7 +36,7 @@
 		public function setQuizList($quizname,$quiz)
 		{
 			$this->quiz = $quiz;
-			$this->quizList = $quiz["questions"];
+			$this->quizList = $quiz->GetQuestions();
 			$this->quizname = $quizname;
 		}
 		public function actionMessages($message){//denna används inte tror jag!
@@ -65,7 +65,7 @@
 		}
 
 		private function generateQuizFormHTML() {
-			$html = '<h2>'.$this->quiz["name"].'</h2><form method="post" action="?Quiz='.$this->quizname.'" >';
+			$html = '<h2>'.$this->quiz->getTitle().'</h2><form method="post" action="?Quiz='.$this->quizname.'" >';
 			$questionIndex = 1;
 			$disabled = "";
 			if ($this->showCorrect)

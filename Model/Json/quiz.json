@@ -76,11 +76,6 @@
 			"question" : " What is the most common blood type in humans?",
 			"option" : ["Type 0", "Type A", "Type B", "Type 1"],
 			"correct" : 0
-		},
-		{
-			"question" : " One famous reddit-post is about a guy with multiple dicks. How many dicks does he have and what is he called?",
-			"option" : ["Two dicks, 'The Twin-Headed Dragon' ", "Two dicks, 'DoubleDickDude'", "Three dicks, 'The Triple Menace'", "Four dicks, 'Quadruple Anal Destructor'"],
-			"correct" : 1
 		}
 
 	]
