@@ -26,6 +26,13 @@ class LayoutView{
     	$this->quizes = $quizes;
     }
 
+    public function checkPageQuiz(){
+    	return isset($_GET["Quiz"]);
+    }
+    public function checkPageCreateQuiz(){
+    	return isset($_GET["CreateQuiz"]);
+    }
+
 	private function generateQuizButton(){
 
 		if(isset($_GET['Quiz']) || isset($_GET['CreateQuiz']))//|| isset($_GET['QuizResultPage']) || isset($_GET['MusicQuiz']) || isset($_GET['ClassicMusicQuiz'])
@@ -42,9 +49,6 @@ class LayoutView{
 			}
 
 	    	$randomQuiz = "<a href=?Quiz=random>Start a random Quiz</a> <br/><br/>";
-	    	$startAQuiz = "<a href=?Quiz=quiz>Start the Ordinary Quiz</a> <br/><br/>";
-	    	$musicQuiz = "<a href=?Quiz=music>Start a Music Quiz</a> <br/><br/>";
-	    	$classicMusicQuiz = "<a href=?Quiz=classicmusic>Start a Classic Music Quiz</a> <br/><br/>";
 	    	$createQuiz = "<a href=?CreateQuiz>Create a Quiz</a> <br/><br/>";
 	    	return $randomQuiz . $html . $createQuiz;
 	    }

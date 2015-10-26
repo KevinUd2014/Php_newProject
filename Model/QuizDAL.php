@@ -8,7 +8,7 @@ class QuizDAL{
             
         $quiz = unserialize($rawfile);
 
-        /*
+        /*//detta är om man ska skapa en json fil!
         $questions = $json["questions"];
            
         $list = array();
@@ -28,18 +28,18 @@ class QuizDAL{
         return $quiz;
     }
 
-    public function writeToBin($file, $object){
-        $json = serialize($object);
+    public function writeToBin($file, $object){//denna funktionen skriver till mina binfiler
+        $bin = serialize($object);
 
-        file_put_contents($file, $json);
+        file_put_contents($file, $bin);
     }
 
-    public function getQuizes()
+    public function getQuizes()//hämtar alla filer i mappen som slutar med .bin
     {
         return glob("Model/quizes/*.bin");
     }
 
-    public function convert()
+    public function convert()//denna kan man använda sig av för att konvertera json filer till serialize!
     {
         foreach (glob("Model/Json/*.json") as $filename)
         {

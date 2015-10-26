@@ -5,6 +5,7 @@ class CreateAQuizView{
 	private static $Name = "CreateAQuizView::Name";
 	private static $Description = "CreateAQuizView::Description";
 	private static $Submit = "CreateAQuizView::Submit";
+	private $message = "";
 
 	public function response() {
 		$response = "";
@@ -28,14 +29,18 @@ class CreateAQuizView{
 		}
 		return false;
 	}
+	public function actionMessages($message){//denna används inte tror jag!
+		
+		$this->message = $message;
+	}
 
 	private function generateCreateQuizFormHTML() {
 
 		return '
 		<form method="POST" action="?CreateQuiz">
 	
-
-			Quiz name: <br>
+			<p>'.$this->message.'</p>
+			Quiz name(No blank spaces!): <br>
 			<input type="text" id="title" name="'.self::$Name.'">
 			<br>
 			Description: <br>

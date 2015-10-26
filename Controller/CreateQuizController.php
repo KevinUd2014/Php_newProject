@@ -5,16 +5,21 @@ class CreateQuizController{
 
 	public function __construct()
 	{
-
+		
 		$this->view = new CreateAQuizView();
 		$qdal = new QuizDAL();
 		$model = new CreateQuizModel($qdal);
 		$data = null;
 		if ($this->view->checkIfPosted($data))
 		{
-			$model->CreateAQuiz($data);
+			try{
+				$model->CreateAQuiz($data);
+			}
+			catch(Exception $e)
+			{
+				$this->view->actionMessages($e->getMessage());
+			}
 		}
-
 	}
 
 	public function getView()

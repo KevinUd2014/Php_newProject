@@ -11,7 +11,7 @@ class CreateQuizModel{
 
 	public function CreateAQuiz($data){
 
-		$title = "unnamed";
+		$title = "";
 		$description = "no description";
 
 		if (isset($data["title"]) && trim($data["title"]) != "")
@@ -19,9 +19,9 @@ class CreateQuizModel{
 		if (isset($data["description"]) && trim($data["description"]) != "")
 			$description  = $data["description"];
 
-		$quiz = new Quiz($title,$description);
+		$quiz = new Quiz($title,$description);  
 
-		if ($data["questions"] == null)
+		if ($data["questions"] == null || $title == "")
 			throw new Exception("No questions in quiz");
 
 		$questioncount = 0;
@@ -31,7 +31,7 @@ class CreateQuizModel{
 			if (!isset($q["options"]))
 				continue;
 			$questioncount++;
-			$quiz->addQuestion(new QuizQuestion($q["title"],$q["options"],$q["correct"] - 1));
+			$quiz->addQuestion(new QuizQuestion($q["title"], $q["options"], $q["correct"] - 1));
 		}
 
 		if ($questioncount == 0)

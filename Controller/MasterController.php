@@ -21,11 +21,9 @@
 			//original view
 			
 			$LayoutView = new LayoutView();
-			$viewToRender = null;
-			
+			$viewToRender = null;  
 
-			
-			if(isset($_GET["Quiz"]))//delar upp min applikation i en register och en login väg! ||isset($_GET["MusicQuiz"]) || isset($_GET["ClassicMusicQuiz"])
+			if($LayoutView->checkPageQuiz())//delar upp min applikation i en register och en login väg! ||isset($_GET["MusicQuiz"]) || isset($_GET["ClassicMusicQuiz"])
 			{
 
 				$quizController = new QuizController($LayoutView);
@@ -34,7 +32,7 @@
 				$viewToRender = $quizController->getView();
 
 			}
-			else if (isset($_GET["CreateQuiz"]))
+			else if ($LayoutView->checkPageCreateQuiz())
 			{
 				$createQuiz = new CreateAQuizView();
 

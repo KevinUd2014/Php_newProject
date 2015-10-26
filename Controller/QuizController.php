@@ -18,13 +18,13 @@ class QuizController{
 		$this->quizView = new QuizView();
 
 
-		if ($_GET["Quiz"] == "random")
+		if ($this->quizView->GetQuizRandom())
 		{
 			$quizes = $this->quizDAL->getQuizes();
 			$this->quizname = basename(str_replace(".bin","",$quizes[rand(0,count($quizes)-1)]));
 		}
 		else
-			$this->quizname = $_GET["Quiz"];
+			$this->quizname = $this->quizView->GetQuiz();//här hade jag en $_GET["Quiz"] istället för $this->quizView->GetQuiz()
 
 		$quizfile = "Model/quizes/" . $this->quizname . ".bin";
 
@@ -45,16 +45,6 @@ class QuizController{
 			try{
 				$this->answer = $this->quizView->GetAnswers();
 				$correctedQuiz = $this->quizModel->checkQuiz($this->quiz,$this->answer);
-
-				/*
-				$i = 1;
-				foreach ($correctedQuiz as $cq)
-				{
-					echo "<br>Fråga nummer $i är ".($cq->isCorrect() ? "Rätt!" : "Fel!")." (you selected ".$cq->getAnswer().")";
-					$i++;
-				}
-				*/
-				//$this->quizModel->trySumitQuiz($this->answer);
 			}
 			catch(Exception $e){
 				$this->quizView->actionMessages($e->getMessage());

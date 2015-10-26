@@ -16,6 +16,16 @@
 				return true;
 			}
 		}
+		public function GetQuizRandom(){
+
+			return $_GET["Quiz"] == "random";
+			
+		}
+		public function GetQuiz(){
+
+			return $_GET["Quiz"];
+
+		}
 		public function GetAnswers(){
 
 			$questionIndex = 1;
