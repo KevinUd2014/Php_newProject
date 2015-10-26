@@ -32,7 +32,7 @@ class LayoutView{
     public function checkPageCreateQuiz(){
     	return isset($_GET["CreateQuiz"]);
     }
-
+  
 	private function generateQuizButton(){
 
 		if(isset($_GET['Quiz']) || isset($_GET['CreateQuiz']))//|| isset($_GET['QuizResultPage']) || isset($_GET['MusicQuiz']) || isset($_GET['ClassicMusicQuiz'])

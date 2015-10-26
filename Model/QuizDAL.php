@@ -8,24 +8,7 @@ class QuizDAL{
             
         $quiz = unserialize($rawfile);
 
-        /*//detta är om man ska skapa en json fil!
-        $questions = $json["questions"];
-           
-        $list = array();
-        
-        foreach ($questions as $q)
-        {
-            $question = $q["question"];
-            $options = $q["option"];
-            $correct = $q["correct"];
-            
-            array_push($list, new QuizQuestion($question,$options,$correct));
-        }
-
-        $quiz = array("name" => $json["name"], "description" => $json["description"], "questions" => $list);
-        */
-
-        return $quiz;
+        return $quiz; 
     }
 
     public function writeToBin($file, $object){//denna funktionen skriver till mina binfiler

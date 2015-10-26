@@ -18,7 +18,7 @@ class QuizController{
 		$this->quizView = new QuizView();
 
 
-		if ($this->quizView->GetQuizRandom())
+		if ($this->quizView->GetQuizRandom()) 
 		{
 			$quizes = $this->quizDAL->getQuizes();
 			$this->quizname = basename(str_replace(".bin","",$quizes[rand(0,count($quizes)-1)]));
@@ -33,12 +33,12 @@ class QuizController{
 		$this->quizView->setQuizList($this->quizname,$this->quiz);
 	}
 
-	public function getView()
+	public function getView()//hämtar min view 
 	{
 		return $this->quizView;
 	}
 
-	public function DidUserQuiz(){
+	public function DidUserQuiz(){//kollar om användaren har startat ett quiz
 
 		if($this->quizView->didUserPostQuiz())
 		{

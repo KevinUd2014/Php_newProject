@@ -27,7 +27,7 @@ class CreateQuizController{
 
 		return $this->view;
 
-	}
+	} 
 	
 
 }

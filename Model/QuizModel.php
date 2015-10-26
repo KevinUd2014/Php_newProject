@@ -14,7 +14,7 @@ class QuizModel{
 			$answer = array_shift($answers);
 			$question->setAnswer($answer);
 
-		}
+		} 
 
 		return $quiz;
 	}

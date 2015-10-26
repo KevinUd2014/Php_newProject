@@ -33,7 +33,7 @@ echo('<pre>');
 var_dump($quizJSON);
 echo('</pre>');
 exit;
-*/
+*/  
 	require_once("Controller/MasterController.php");
 
 	$masterController = new MasterController();

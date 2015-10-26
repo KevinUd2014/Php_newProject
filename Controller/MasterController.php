@@ -24,15 +24,15 @@
 			$viewToRender = null;  
 
 			if($LayoutView->checkPageQuiz())//delar upp min applikation i en register och en login väg! ||isset($_GET["MusicQuiz"]) || isset($_GET["ClassicMusicQuiz"])
-			{
+			{//denna delar upp min applikation i min kör ett quiz
 
 				$quizController = new QuizController($LayoutView);
 				$quizController->DidUserQuiz();
 
 				$viewToRender = $quizController->getView();
 
-			}
-			else if ($LayoutView->checkPageCreateQuiz())
+			} 
+			else if ($LayoutView->checkPageCreateQuiz())// denna genererar ut min create a quiz 
 			{
 				$createQuiz = new CreateAQuizView();
 
@@ -40,7 +40,7 @@
 
 				$viewToRender = $CreateQuizController->getView();
 			}
-			else
+			else// denna genererar ut mina nuvarande quiz
 			{
 				$qdal = new QuizDAL();
 				$LayoutView->setQuizes($qdal->getQuizes());

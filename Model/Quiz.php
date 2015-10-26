@@ -12,7 +12,7 @@ class Quiz{
 		$this->questions = array();
 	}
 
-	public function addQuestion($question){
+	public function addQuestion($question){//lägger till frågorna
 		array_push($this->questions, $question);
 	}
 
@@ -21,7 +21,7 @@ class Quiz{
 		return $this->questions;
 	}
 
-	public function getTitle(){
-		return $this->title;
+	public function getTitle(){//hämtar namen
+		return $this->title; 
 	}
 }

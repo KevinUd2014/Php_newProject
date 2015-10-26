@@ -27,7 +27,7 @@ class CreateAQuizView{
 			$data = array("questions" => (isset($_POST["questions"]) ? $_POST["questions"] : null), "title" => $_POST[self::$Name], "description" => $_POST[self::$Description]);
 			return true;
 		}
-		return false;
+		return false;  
 	}
 	public function actionMessages($message){//denna används inte tror jag!
 		

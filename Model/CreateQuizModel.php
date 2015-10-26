@@ -9,10 +9,10 @@ class CreateQuizModel{
 		$this->quizDAL = $quizDAL;
 	}
 
-	public function CreateAQuiz($data){
+	public function CreateAQuiz($data){// denna skapar quizen
 
-		$title = "";
-		$description = "no description";
+		$title = "";// sätter titeln till tom
+		$description = "no description"; 
 
 		if (isset($data["title"]) && trim($data["title"]) != "")
 			$title = $data["title"];
@@ -24,7 +24,7 @@ class CreateQuizModel{
 		if ($data["questions"] == null || $title == "")
 			throw new Exception("No questions in quiz");
 
-		$questioncount = 0;
+		$questioncount = 0; 
 
 		foreach ($data["questions"] as $q)
 		{
@@ -45,7 +45,6 @@ class CreateQuizModel{
 			else
 				$count++;
 		}
-
 
 		$this->quizDAL->writeToBin("Model/quizes/".$quiz->getTitle().$count.".bin",$quiz);
 
