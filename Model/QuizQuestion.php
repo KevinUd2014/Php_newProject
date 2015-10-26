@@ -16,7 +16,7 @@
 		public function getQuestion() //hämtar frågor
 		{
 			return $this->question;
-		}
+		} 
 		public function getOptions() //hämtar options
 		{
 			return $this->options;

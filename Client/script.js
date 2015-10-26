@@ -4,7 +4,7 @@
 	var addQuestionButton = document.querySelector("#addquestion");
 	var submitButton = document.querySelector("input[type=submit]");
 
-	var questionsCount = 0;
+	var questionsCount = 0; 
 
 	addQuestionButton.addEventListener("click",function(event) {
 		event.preventDefault();

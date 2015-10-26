@@ -22,7 +22,7 @@ class CreateAQuizView{
 	public function checkIfPosted(&$data)
 	{
 		
-		if (isset($_POST[self::$Submit]))
+		if (isset($_POST[self::$Submit])) 
 		{
 			$data = array("questions" => (isset($_POST["questions"]) ? $_POST["questions"] : null), "title" => $_POST[self::$Name], "description" => $_POST[self::$Description]);
 			return true;

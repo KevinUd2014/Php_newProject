@@ -17,7 +17,7 @@ class QuizDAL{
         file_put_contents($file, $bin);
     }
 
-    public function getQuizes()//hämtar alla filer i mappen som slutar med .bin
+    public function getQuizes()//hämtar alla filer i mappen som slutar med .bin 
     {
         return glob("Model/quizes/*.bin");
     }

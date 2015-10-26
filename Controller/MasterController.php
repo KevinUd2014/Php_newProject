@@ -11,7 +11,7 @@
 	require_once("View/LayoutView.php");
 	require_once("Model/QuizDAL.php");
 	require_once("View/CreateAQuizView.php");
-	require_once("Controller/CreateQuizController.php");
+	require_once("Controller/CreateQuizController.php"); 
 
 	class MasterController{
 			//CREATE OBJECTS OF THE VIEWS  

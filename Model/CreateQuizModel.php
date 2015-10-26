@@ -12,7 +12,7 @@ class CreateQuizModel{
 	public function CreateAQuiz($data){// denna skapar quizen
 
 		$title = "";// sätter titeln till tom
-		$description = "no description"; 
+		$description = "no description";  
 
 		if (isset($data["title"]) && trim($data["title"]) != "")
 			$title = $data["title"];

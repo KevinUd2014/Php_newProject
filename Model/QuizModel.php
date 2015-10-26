@@ -16,6 +16,6 @@ class QuizModel{
 
 		} 
 
-		return $quiz;
+		return $quiz; 
 	}
 }

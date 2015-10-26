@@ -16,7 +16,7 @@ class Quiz{
 		array_push($this->questions, $question);
 	}
 
-	public function getQuestions()
+	public function getQuestions() 
 	{
 		return $this->questions;
 	}

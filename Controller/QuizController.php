@@ -11,7 +11,7 @@ class QuizController{
 
 	private $quizname;
 
-	public function __construct(LayoutView $layoutView){
+	public function __construct(LayoutView $layoutView){ 
 
 		$this->quizDAL = new QuizDAL();
 		$this->quizModel = new QuizModel($this->quizDAL);

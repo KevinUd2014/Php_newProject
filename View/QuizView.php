@@ -26,7 +26,7 @@
 			return $_GET["Quiz"];
 
 		}
-		public function GetAnswers(){
+		public function GetAnswers(){ 
 
 			$questionIndex = 1;
 			foreach($this->quizList as $quizquestion)
