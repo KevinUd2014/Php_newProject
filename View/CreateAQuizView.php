@@ -64,7 +64,7 @@ class CreateAQuizView{
 			<button id="addquestion">Add question</button>
 				<br>
 				<br>
-			<input type="submit" id="submit" name="'.self::$Submit.'">
+			<input type="submit" id="submit" value="Create quiz" name="'.self::$Submit.'">
 
 		</form> <script src="Client/script.js"> </script>';
 	}

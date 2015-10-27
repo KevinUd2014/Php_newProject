@@ -23,12 +23,13 @@
 		}
 		public function GetQuiz(){
 
-			return $_GET["Quiz"];
+			return urldecode($_GET["Quiz"]);
 
 		}
 		public function GetAnswers(){ 
 
 			$questionIndex = 1;
+			
 			foreach($this->quizList as $quizquestion)
 			{
 				if(isset($_POST["q$questionIndex"]))

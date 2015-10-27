@@ -37,7 +37,7 @@ class LayoutView{
 
 		if(isset($_GET['Quiz']) || isset($_GET['CreateQuiz']))//|| isset($_GET['QuizResultPage']) || isset($_GET['MusicQuiz']) || isset($_GET['ClassicMusicQuiz'])
 		{//avsluta knappen ska vara tillgänglig hela tiden!
-			return "<a href=?>Avsluta</a>";
+			return "<a href=\"?\">Avsluta</a>";
 		}
 		else//genererar de olika länkarna till mina olika quiz!
 		{
@@ -45,11 +45,11 @@ class LayoutView{
 			foreach ($this->quizes as $quiz)
 			{
 				$name = basename(str_replace(".bin","",$quiz));
-				$html .= "<a href=?Quiz=$name>Start $name</a><br>";
+				$html .= "<a href=\"?Quiz=".urlencode($name)."\">Start $name</a><br>";
 			}
 
-	    	$randomQuiz = "<a href=?Quiz=random>Start a random Quiz</a> <br/><br/>";
-	    	$createQuiz = "<a href=?CreateQuiz>Create a Quiz</a> <br/><br/>";
+	    	$randomQuiz = "<a href=\"?Quiz=random\">Start a random Quiz</a> <br/><br/>";
+	    	$createQuiz = "<a href=\"?CreateQuiz\">Create a Quiz</a> <br/><br/>";
 	    	return $randomQuiz . $html . $createQuiz;
 	    }
 	}

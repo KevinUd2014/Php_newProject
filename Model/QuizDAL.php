@@ -7,12 +7,14 @@ class QuizDAL{
         $rawfile = file_get_contents($file);
             
         $quiz = unserialize($rawfile);
-
+  
         return $quiz; 
     }
 
     public function writeToBin($file, $object){//denna funktionen skriver till mina binfiler
-        $bin = serialize($object);
+        $bin = serialize($object); 
+
+       // $noBlankspace = str_replace($file, "", "_"); 
 
         file_put_contents($file, $bin);
     }
