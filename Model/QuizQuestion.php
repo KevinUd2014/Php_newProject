@@ -23,7 +23,7 @@
 		}
 		public function getCorrectAnswer()//hämtar rätta svaret
 		{
-			return $this->correctAnswer;
+			return $this->correctAnswer; 
 		}
 		public function getAnswer()//hämtar svaren
 		{

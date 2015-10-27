@@ -8,7 +8,7 @@
 
 	addQuestionButton.addEventListener("click",function(event) {
 		event.preventDefault();
-		addQuestion();
+		addQuestion(); 
 	});
 
 

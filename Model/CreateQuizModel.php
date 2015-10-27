@@ -28,7 +28,7 @@ class CreateQuizModel{
 			throw new Exception("No tags in my quiz");
 		}
 		$questioncount = 0; 
-
+ 
 		foreach ($data["questions"] as $q)
 		{
 			if(strip_tags($q["title"]) != $q["title"]){

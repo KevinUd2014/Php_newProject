@@ -19,7 +19,7 @@ class CreateAQuizView{
 		return $response;
 	}
 
-	public function checkIfPosted(&$data)
+	public function checkIfPosted(&$data) 
 	{
 		
 		if (isset($_POST[self::$Submit])) 
@@ -57,7 +57,7 @@ class CreateAQuizView{
 			  	</ol>
 			  	<label>Correct answer:</label> <input type="number" name="questions[Q][correct]" min="1" max="1" value="1" class="correct">
 			</fieldset>
-			<div id="questionlist">
+			<div id="questionlist"> 
 
 			</div>
 
@@ -70,38 +70,3 @@ class CreateAQuizView{
 	}
 	
 }
-
-/*
-$questions = array(
-	array(
-		"question" => "What is the creators name?",
-		"option" => array("Kungen", "The Man", " ", "The Master"),
-		"correct" => 2
-	),
-	array(
-		"question" => "What is the creators name?",
-		"option" => array("Kungen", "The Man", " ", "The Master"),
-		"correct" => 2
-	),
-	array(
-		"question" => "What is the creators name?",
-		"option" => array("Kungen", "The Man", " ", "The Master"),
-		"correct" => 2
-	),
-	array(
-		"question" => "What is the creators name?",
-		"option" => array("Kungen", "The Man", " ", "The Master"),
-		"correct" => 2
-	)
-);
-$q = array(
-	"name" => "Bästa quizzet EVUR",
-	"description" => "aljkfhksjdfh",
-	"questions" => $questions
-);
-
-$quizJSON = json_encode($q, JSON_PRETTY_PRINT);
-
-var_dump($quizJSON);
-
-*/

@@ -21,7 +21,7 @@ class QuizDAL{
     public function getQuizes()//hämtar alla filer i mappen som slutar med .bin 
     {
         return glob("Model/quizes/*.bin");
-    }
+    } 
 
     public function convert()//denna kan man använda sig av för att konvertera json filer till serialize!
     {

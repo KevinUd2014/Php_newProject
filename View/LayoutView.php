@@ -23,7 +23,7 @@ class LayoutView{
 
     public function setQuizes($quizes)
     {
-    	$this->quizes = $quizes; 
+    	$this->quizes = $quizes;  
     }
 
     public function checkPageQuiz(){

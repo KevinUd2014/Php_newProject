@@ -39,7 +39,7 @@
 				else
 					array_push($this->arrayOfAnswers,null);
 
-				$questionIndex++;
+				$questionIndex++; 
 			}
 			return $this->arrayOfAnswers;
 		}

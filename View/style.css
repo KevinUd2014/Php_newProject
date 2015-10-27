@@ -20,7 +20,7 @@ input.correct
 }
 body
 {
-	/*position:Centre;*/
+	/*position:Centre;*/ 
 	margin: auto;
     width: 95%;
     border:2px solid lightgreen;

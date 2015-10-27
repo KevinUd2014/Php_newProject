@@ -18,4 +18,4 @@ class QuizModel{
 
 		return $quiz; 
 	}
-}
+} 

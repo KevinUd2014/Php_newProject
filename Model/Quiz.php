@@ -20,7 +20,7 @@ class Quiz{
 	{
 		return $this->questions;
 	}
-
+ 
 	public function getTitle(){//hämtar namen
 		return $this->title; 
 	}

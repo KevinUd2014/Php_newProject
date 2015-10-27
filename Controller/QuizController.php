@@ -17,7 +17,6 @@ class QuizController{
 		$this->quizModel = new QuizModel($this->quizDAL);
 		$this->quizView = new QuizView();
 
-
 		if ($this->quizView->GetQuizRandom()) 
 		{
 			$quizes = $this->quizDAL->getQuizes();

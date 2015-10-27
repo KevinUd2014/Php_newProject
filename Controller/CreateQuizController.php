@@ -9,7 +9,7 @@ class CreateQuizController{
 		$this->view = new CreateAQuizView();
 		$qdal = new QuizDAL();
 		$model = new CreateQuizModel($qdal);
-		$data = null;
+		$data = null; 
 		if ($this->view->checkIfPosted($data))
 		{
 			try{
