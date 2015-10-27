@@ -13,27 +13,28 @@ class CreateQuizModel{
 
 		$title = "";// sätter titeln till tom
 		$description = "no description";  
-		//var_dump($data["questions"][0]["options"]);
-		//var_dump($data);
+
 		if (isset($data["title"]) && trim($data["title"]) != "")
 			$title = $data["title"];
 		if (isset($data["description"]) && trim($data["description"]) != "")
 			$description  = $data["description"];
-		// if (isset($data["options"]) && trim($data["options"]) != "")
-		// 	$options  = $data["options"];
 
 		$quiz = new Quiz($title,$description);  
 
 		if ($data["questions"] == null || $title == "")
 			throw new Exception("No questions in quiz");
 
-		// if($data["questions"]["options"] == null || $options == "")
-		// 	throw new Exception("No options in quiz");
-
+		if(strip_tags($title) != $title || strip_tags($description) != $description){
+			throw new Exception("No tags in my quiz");
+		}
 		$questioncount = 0; 
 
 		foreach ($data["questions"] as $q)
 		{
+			if(strip_tags($q["title"]) != $q["title"]){
+				throw new Exception("No tags in questions in my quiz");
+			} 
+
 			if (!isset($q["options"]))
 				continue;
 
@@ -50,6 +51,9 @@ class CreateQuizModel{
 					$currentOption++;//och plussar på den man är på så man kan kolla nästa
 					continue;
 				}
+
+				if(strip_tags($o) != $o)
+					throw new Exception("No tags in option in my quiz");
 
 				$currentOption++;
 				array_push($options,$o);//lägger in allt i arrayen

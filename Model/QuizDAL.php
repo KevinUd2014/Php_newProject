@@ -12,9 +12,8 @@ class QuizDAL{
     }
 
     public function writeToBin($file, $object){//denna funktionen skriver till mina binfiler
-        $bin = serialize($object); 
 
-       // $noBlankspace = str_replace($file, "", "_"); 
+        $bin =serialize($object); 
 
         file_put_contents($file, $bin);
     }
